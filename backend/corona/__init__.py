@@ -9,7 +9,6 @@ from threading import Thread
 from flask_mail import Mail
 from flask_sqlalchemy import SQLAlchemy
 
-
 # extensions
 cors = CORS()
 mail = Mail()
@@ -40,7 +39,6 @@ def create_app(config_class=Config):
     # Add blueprints here
     from corona.routes import corona
     app.register_blueprint(corona)
-
 
     # THREADS HERE
     # cache_thread = Thread(target=clear_cache_thread, daemon=True)
